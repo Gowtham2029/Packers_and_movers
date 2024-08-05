@@ -1,38 +1,235 @@
-.App {
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: none;
+  overflow-x: hidden;
+
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.scroll{
+  display: flex;
+  width:100vw;
+  height:30%;
+}
+.logo{
+  width:10%;
+  height:10rem
+}
+
+.logo > img{
+  width:100%;
+
+}
+.scroll-left {
+ margin-top:1.5rem;
+  width: 90%;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+  color: orange;
+ }
+
+ .scroll-left h1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
   text-align: center;
-}
+  transform:translateX(100%);
+  animation:scroll-left 10s linear infinite;
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ @keyframes scroll-left {
+  0%   {
+  transform: translateX(100%); 		
   }
+  100% {
+  transform: translateX(-100%); 
+  }
+ }
+
+
+
+ .navbar > ul {
+  display: flex;
+  justify-content: space-evenly;
+ 
+
+ }
+
+ .whatsapp{
+ cursor: pointer;
+  display: flex;
+  align-items: center;
+  position:fixed;
+  
+ }
+
+ .whatsapp > h2{
+  font-weight: 500;
+ }
+
+ .navbar > ul > li{
+  list-style-type: none;
+
+  
+ }
+
+ .navbar > ul > li:hover{
+   border-bottom: 3px solid orange;
+ }
+ 
+
+  .navbar > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+ .back-to-top{
+  
+  
+  
+ }
+
+ /* .back-to-top > a {
+  height: 4rem;
+  width: 4rem;
+ } */
+
+ .navbar{
+  height:5rem;
+ }
+
+ .navbar > ul > li > a{
+   overflow-y: hidden;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+ }
+
+ .sec-one{
+  display: flex;
+  justify-content: space-evenly;
+  margin:5rem;
+ }
+
+ .sec-one > img{
+  height:40%;
+  width: 30%;
+  height:auto;
+  padding-right:2rem
+ 
+ }
+
+
+ .about{
+   height: 90vh;
+
+ }
+
+ 
+ .services{
+  height: 90vh;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery{
+  height: 90vh;
+
+}
+
+.contact{
+  height: 50vh;
+  overflow-x: hidden;
+  
+
+}
+
+.contact-container{
+  
+  display: flex;
+  justify-content: space-around;
+  margin:0 auto;
+  border-radius: 3rem;
+  width: 75%;
+  height: 70%;
+  background-color: rgb(151, 148, 148);
+  color:black;
+  font-weight: 500;
+  
+}
+
+
+
+ .contact-phone > img{
+  height: 2.6rem;
+  width:2.6rem;
+  
+  border-radius:2rem
+ }
+
+ .contact-phone{
+  margin:3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ }
+
+ .contact-address{
+  margin:3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .contact-address > img{
+   height: 3rem;
+   width:3rem;
+   border-radius:2rem
 }
 
-.App-link {
-  color: #61dafb;
+.contact-email{
+  margin:3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-email > img{
+  height: 3rem;
+  width:3rem;
+  border-radius:2rem
+
 }
+
+
+.top {
+  margin:0 1rem 2rem 87rem;
+  display: flex;
+  justify-content: flex-end;
+   position: fixed; 
+
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  z-index: 99;
+ 
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+
+
+ 
